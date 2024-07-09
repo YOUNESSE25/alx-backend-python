@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 '''
-Task 1's
+Task 1
 '''
 from typing import List
 from importlib import import_module as using
