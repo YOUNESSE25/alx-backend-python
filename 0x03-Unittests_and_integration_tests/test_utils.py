@@ -20,7 +20,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
-    def testAccessNestedMap(
+    def test_access_nested_map(
             self,
             nested_map: Dict,
             path: Tuple[str],
@@ -33,7 +33,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({}, ("a",), KeyError),
         ({"a": 1}, ("a", "b"), KeyError),
     ])
-    def testAccessNestedMapException(
+    def test_access_nested_map_exception(
             self,
             nested_map: Dict,
             path: Tuple[str],
@@ -50,7 +50,7 @@ class TestGetJson(unittest.TestCase):
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False}),
     ])
-    def testGetJson(
+    def test_get_json(
             self,
             test_url: str,
             test_payload: Dict,
@@ -63,8 +63,8 @@ class TestGetJson(unittest.TestCase):
 
 
 class TestMemoize(unittest.TestCase):
-    """Testing the `memoize` function."""
-    def testMemoize(self) -> None:
+    """Testing `memoize` function."""
+    def test_memoize(self) -> None:
         """Testing `memoize`'s output."""
         class TestClass:
             def a_method(self):
